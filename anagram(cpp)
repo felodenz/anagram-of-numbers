@@ -42,5 +42,4 @@ int main(){
 			number/=10;
 			reversed_number+=select_part*ten_in_power(p);
 		}
-		cout<<endl<<reversed_number+2;
 }
