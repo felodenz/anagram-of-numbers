@@ -1,0 +1,46 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int number;
+int reversed_number=0;
+bool target=true;
+int member=0;
+//baraye mohasebeye 10 be tavane int b
+int ten_in_power(int b){
+	int ten_power=1;
+	for(int i=0;i<b;i++){		
+		ten_power*= 10;
+	}
+	return ten_power;
+}
+//barax kardane adade karbar v shemordan tedad arghame adadash
+int reverse(int number){
+	while(target!=false)
+	{
+		int select_part;
+		select_part=number%10;
+		number/=10;
+		cout<<select_part;
+		if(number==0){
+			target=false;
+		}
+		member++;
+	}
+}
+
+int main(){
+		//gereftan vorudi karbar
+		cout<<"enter your number: ";
+		cin>>number;
+		//estefade az tabeye baraz kardane adad
+		reverse(number);
+		cout<<endl;
+		//estefade az ghavanine riaziat baraye zakhire v dastresi be adade vorudi bedune estefade az araye
+		int i_counter=member-1;
+		for(int p=i_counter;p>=0;p--){
+			int select_part=number%10;
+			number/=10;
+			reversed_number+=select_part*ten_in_power(p);
+		}
+		cout<<endl<<reversed_number+2;
+}
