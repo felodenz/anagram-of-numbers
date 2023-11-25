@@ -12,8 +12,8 @@ int ten_in_power(int b){
 	for(int i=0;i<b;i++){		
 		ten_power+= "0";
 	}
-        int ten_power = stoi(ten_power);
-	return ten_power;
+        int answer = stoi(ten_power);
+	return answer;
 }
 //barax kardane adade karbar v shemordan tedad arghame adadash
 int reverse(int number){
