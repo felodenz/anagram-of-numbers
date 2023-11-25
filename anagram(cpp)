@@ -1,5 +1,6 @@
 #include<iostream>
 #include<conio.h>
+#include<string>
 using namespace std;
 int number;
 int reversed_number=0;
@@ -7,10 +8,11 @@ bool target=true;
 int member=0;
 //baraye mohasebeye 10 be tavane int b
 int ten_in_power(int b){
-	int ten_power=1;
+	string ten_power="1";
 	for(int i=0;i<b;i++){		
-		ten_power*= 10;
+		ten_power+= "0";
 	}
+        int ten_power = stoi(ten_power);
 	return ten_power;
 }
 //barax kardane adade karbar v shemordan tedad arghame adadash
